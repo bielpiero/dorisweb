@@ -1,0 +1,94 @@
+
+.u-vmenu * {
+                margin: 0;
+                padding: 0;
+                text-align:left;
+
+            }
+
+
+.u-vmenu ul li a[data-option='on']{
+	background: url("../../images/vmenu/on.png") right center no-repeat;
+}
+.u-vmenu ul li a[data-option='off'] {
+	background: url("../../images/vmenu/off.png") right center no-repeat;
+}  
+
+
+
+.u-vmenu ul li {
+	width: 200px;
+	list-style: none;
+}
+.u-vmenu ul ul{
+	display: none;
+}
+.u-vmenu > ul > li {
+    background: rgba(0, 0, 0, 0) linear-gradient(#1fa0e4, #1992d1) repeat scroll 0 0;
+    color: #eeeeee;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset;
+
+}
+
+
+
+.u-vmenu  ul  li ul li a:hover {
+ background-color: #424852; 
+}
+
+
+.u-vmenu ul li a {
+	height: 30px;
+	line-height: 30px;
+	display: block;
+	font-size: 13px;
+    font-family: Arial;
+	color: white;
+	text-decoration: none;
+	outline: none;
+}
+
+
+
+.u-vmenu > ul > li > a {
+	height: 42px;
+	line-height: 42px;
+	padding-left: 15px;
+    	font-size: 13px;
+    font-family: Arial;
+    font-weight: bold;
+}
+.u-vmenu > ul > li > ul > li > a {
+	padding-left: 20px;
+}
+
+.u-vmenu  ul  li  ul  li  a {
+  background: #49505a none repeat scroll 0 0;
+}
+.u-vmenu  ul  li  ul  li a {
+  -moz-box-shadow:  0 1px 0 rgba(255, 255, 255, 0.1) inset;
+-webkit-box-shadow:  0 1px 0 rgba(255, 255, 255, 0.1) inset; 
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset;
+
+border-bottom: 1px solid #32373e;
+
+
+
+}
+
+.u-vmenu  ul > li > ul > li {
+
+  background: #49505a none repeat scroll 0 0;
+
+}
+
+.u-vmenu > ul > li > ul > li > ul > li > a {
+	padding-left: 30px;
+
+ 
+}
+.u-vmenu > ul > li > ul > li > ul > li > ul > li > a {
+	padding-left: 46px;
+
+
+}

@@ -1,0 +1,100 @@
+﻿#mapping-section #position-control-section{
+  float: left;
+  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
+
+}
+
+#mapping-section #navigation-section{
+  float: left;
+  width: 680px;
+
+  max-width: 680px;
+  min-width: 680px;
+}
+
+#mapping-section #position-control-section #position-velocity-section{
+  
+}
+
+#mapping-section #position-control-section #position-velocity-section #position-section{
+  float: left;
+  width: 150px;
+}
+
+#mapping-section #position-control-section #position-velocity-section #velocity-section{
+  float: left;
+  width: 150px;
+}
+
+#mapping-section #position-control-section #control-section{
+  width: 300px;
+  
+}
+
+
+
+#control-section-left{
+  float: left;
+  width: 84px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#control-section-center{
+  float: left;
+  width: 84px; 
+  
+}
+
+#control-section-right{
+  float: left;
+  width: 84px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+.control-row{
+  display: flex;
+}
+
+.control-col{
+  /*flex: 1; */
+  /*padding: 1em; */
+  border: none;
+}
+
+
+.spacing{
+  margin-bottom: 5px;
+}
+
+
+@media screen and (min-width:0\0) { 
+    /* Tus estilos CSS para IE9, IE10, IE11  */
+    #mapping_div_control_container{
+      width:550px;
+    }
+    #control-section-left{
+      margin-right:5px;
+      margin-top:78px;
+    }
+    #control-section-right{
+      margin-top:78px;
+      margin-left:5px;
+    }
+}
+@media screen and (max-width: 1350px) {
+ 
+    /*@viewport {
+    width: device-width;
+    zoom: 0.7; */
+
+
+  }
+
+
+
+

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+</head>
+<body >
+    	<div id="menu12" style="float:left">
+        	<ul id="arm_expressions_list"></ul>
+    	</div>
+    	<div  style="float:right">
+    		<img src="style/images/brazo2.jpg" style="width:422px;height: :422px">
+    	</div>
+    	<div class="slidecontainer">
+            <!--<input id="slider1" data-slider-id='slider1Slider' type="text" data-slider-min="0" data-slider-max="60" data-slider-step="1" data-slider-value="0"/><p>Angulo Motor Hombro 1: <span id="valor1"> </span></p>-->
+ 			 <input type="range" min="0" max="60" value="0" class="slider" id="slider1"> <p>Angulo Motor Hombro 1: <span id="valor1"> </span></p>
+			<script> 
+   				var slider1= document.getElementById("slider1");
+    			var output1 = document.getElementById("valor1");
+    			output1.innerHTML=slider1.value;
+    			slider1.onmouseup = function() {
+        			output1.innerHTML = this.value;
+                    if(!document.getElementById("check_moving_options").checked){
+                        addMessage(65, "0," + this.value);
+                    }
+    			}
+			</script> 
+
+ 			 <input type="range" min="0" max="60" value="0" class="slider" id="slider2"> <p>Angulo Motor Hombro 2: <span id="valor2"> </span></p>
+ 			<script>
+ 				var slider2= document.getElementById("slider2");
+    			var output2 = document.getElementById("valor2");
+    			output2.innerHTML=slider2.value;
+    			slider2.onmouseup = function() {
+        			output2.innerHTML = this.value;
+                    if(!document.getElementById("check_moving_options").checked){
+                        addMessage(65, "1," + this.value);
+                    }
+    			}
+    		</script> 
+ 			 <input type="range" min="0" max="120" value="90" class="slider" id="slider3"> <p>Angulo Motor Codo 1: <span id="valor3"> </span></p>
+ 			<script>
+ 			var slider3= document.getElementById("slider3");
+    		var output3 = document.getElementById("valor3");
+    		output3.innerHTML=slider3.value;
+   			slider3.onmouseup = function() {
+        		output3.innerHTML = this.value;
+                if(!document.getElementById("check_moving_options").checked){
+                        addMessage(65, "2," + this.value);
+                    }
+    		}
+ 			</script> 
+
+ 			 <input type="range" min="0" max="130" value="0" class="slider" id="slider4"> <p>Angulo Motor Codo 2: <span id="valor4"> </span></p>
+ 			<script>
+ 			 	var slider4= document.getElementById("slider4");
+    			var output4 = document.getElementById("valor4");
+    			output4.innerHTML=slider4.value;
+   				slider4.onmouseup = function() {
+        			output4.innerHTML = this.value;
+                    if(!document.getElementById("check_moving_options").checked){
+                        addMessage(65, "3," + this.value);
+                    }
+    			}
+ 			</script> 
+
+ 			 <input type="range" min="-25" max="25" value="0" class="slider" id="slider5"> <p>Angulo Motor Muñeca 1: <span id="valor5"> </span></p>
+ 			 <script>
+ 			 	var slider5= document.getElementById("slider5");
+     			var output5 = document.getElementById("valor5");
+     			output5.innerHTML=slider5.value;
+    			slider5.onmouseup = function() {
+        			output5.innerHTML = this.value;
+                    if(!document.getElementById("check_moving_options").checked){
+                        addMessage(65, "4," + this.value);
+                    }
+    			}
+ 			 </script> 
+
+ 			 <input type="range" min="-25" max="25" value="0" class="slider" id="slider6"> <p>Angulo Motor Muñeca 2: <span id="valor6"> </span></p>
+ 			 <script>
+ 			 	var slider6= document.getElementById("slider6");
+    			var output6 = document.getElementById("valor6");
+    			output6.innerHTML=slider6.value;
+    			slider6.onmouseup = function() {
+        			output6.innerHTML = this.value;
+                    if(!document.getElementById("check_moving_options").checked){
+                        addMessage(65, "5," + this.value);
+                    }
+    			}    
+ 			</script> 
+
+ 			 <input type="range" min="0" max="90" value="10" class="slider" id="sliderP"> <p>Angulo Motor Pulgar: <span id="valorP"> </span></p>
+ 			<script>
+ 			  	var sliderP= document.getElementById("sliderP");
+    			var outputP = document.getElementById("valorP");
+    			outputP.innerHTML=sliderP.value;
+    			sliderP.onmouseup = function() {
+        			outputP.innerHTML = this.value;
+                    if(!document.getElementById("check_moving_options").checked){
+                        addMessage(65, "6," + this.value);
+                    }
+    			}
+
+ 			</script> 
+
+ 			 <input type="range" min="0" max="90" value="10" class="slider" id="sliderI"> <p>Angulo Motor Indice: <span id="valorI"> </span></p>
+			<script>
+				 var sliderI= document.getElementById("sliderI");
+    			var outputI= document.getElementById("valorI");
+    			outputI.innerHTML=sliderI.value;
+    			sliderI.onmouseup = function() {
+        			outputI.innerHTML = this.value;
+                    if(!document.getElementById("check_moving_options").checked){
+                        addMessage(65, "7," + this.value);
+                    }
+    			}
+			</script> 
+
+ 			 <input type="range" min="0" max="90" value="10" class="slider" id="sliderC"> <p>Angulo Motor Medio: <span id="valorC"> </span></p>
+ 			<script>
+ 				var sliderC= document.getElementById("sliderC");
+    			var outputC = document.getElementById("valorC");
+   				outputC.innerHTML=sliderC.value;
+    			sliderC.onmouseup = function() {
+        			outputC.innerHTML = this.value;
+                    if(!document.getElementById("check_moving_options").checked){
+                        addMessage(65, "8," + this.value);
+                    }
+    			}
+ 			</script> 
+ 	</div>
+ 			 <div id="moving_options" style="position:absolute;left:690px;top:500px;text-align:center;display:inline;white-space: nowrap;"><span style="text-align:left;color:#ffffff;font-weight:bolder;  "> Esto es una caca</span><br>
+           <input type="checkbox" name="check_moving_options"  id="check_moving_options" value="checkbox"onclick="activarCasilla()" > <span style="text-align:left;color:#ff5050;font-weight:bolder;  "> Mover motores una vez situados los sliders </span><br>
+           </div>
+
+           <button  style="display: none;position:absolute;top:555px; left: 820px;" data-toggle="modal" class="btn btn-info" type="button" id="move_doris_arm" onclick="send_bulk_arm_angles();">
+            Move Arm
+        </button>
+  <!--<input type = "button" id="mover" value = "mover" style="display: none;position:absolute;top:555px; left: 820px";/>  -->
+          
+    
+
+		<script>
+		function activarCasilla(){
+			move_doris_arm.style.display = 'inline';
+			if(document.getElementById("check_moving_options").checked){
+				mover.style.display = 'inline';
+			}
+			else{
+				mover.style.display = 'none';
+			}
+		}
+		</script> 
+</body>
+</html>
+
+
+	<!--
+   
+         <button data-target="#moverMotoresSametime" style="display:none;position:absolute;top:535px; left: 820px;" data-toggle="modal"  type="button" id="MoverMotoresDeGolpe">
+            Mover
+            </button>
+            -->

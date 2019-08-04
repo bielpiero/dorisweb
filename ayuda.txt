@@ -1,0 +1,2 @@
+Para ejecutar la web, se necesita que este alojada en un servidor, por ejemplo apache.
+Para la realización de este proyecto se ha utilizado la herramiento wamp server, que cuenta con un servidor apache.

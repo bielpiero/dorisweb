@@ -1,0 +1,42 @@
+#table-feelings{
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+}
+
+#table-feelings-row{
+	width: 100%;
+	display: table-row;
+}
+
+#chartContainerAlert{
+	display: table-cell;
+	height: 280px;
+
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px 0 #bbb;
+}
+
+#chartContainerMood{
+	display: table-cell;
+	height: 280px;
+
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px 0 #bbb;
+}
+
+#chartContainerAffection{
+	display: table-cell;
+	height: 280px;
+	
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px 0 #bbb;
+}
+
+#chartContainerEmotion{
+	display: table-row;
+	height: 280px;
+	flex: 1 100%;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px 0 #bbb;
+}

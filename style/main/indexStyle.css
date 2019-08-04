@@ -1,0 +1,328 @@
+﻿
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+@font-face {
+  font-family: 'codropsicons';
+  src:url('../fonts/codropsicons/codropsicons.eot');
+  src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+    url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+    url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ecoicon';
+  src:url('../fonts/ecoicons/ecoicon.eot');
+  src:url('../fonts/ecoicons/ecoicon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ecoicons/ecoicon.woff') format('woff'),
+    url('../fonts/ecoicons/ecoicon.ttf') format('truetype'),
+    url('../fonts/ecoicons/ecoicon.svg#ecoicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+div#container
+{
+   width: 100%;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: white;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+
+a:active
+{
+   color: #FF0000;
+}
+
+#banner
+{
+   background-color: #4E00C0;
+   -moz-box-shadow: 0px 0px 3px #000000;
+   -webkit-box-shadow: 0px 0px 3px #000000;
+   box-shadow: 0px 0px 3px #000000;
+}
+#footer
+{
+   background-color: #696969;
+}
+#wb_banner_title 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+   width: 20%;
+   float: left;
+   margin-top:0.01em;
+   z-index:3;
+   text-align:left;
+   margin-left:2%;
+
+}
+#wb_banner_title div
+{
+   text-align: left;
+}
+#wb_footer_title 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_footer_title div
+{
+   text-align: center;
+}
+#wb_banner_menu
+{
+   border: 0px #DCDCDC solid;
+   background-color: transparent;
+   float: left;
+   /*width:45%;*/
+   /*margin-right:5%;*/
+}
+#wb_banner_menu ul
+{
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+#wb_banner_menu li
+{
+   float: left;
+   margin: 0;
+   padding: 0px 0px 0px 0px;
+   width: 95px;
+}
+#wb_banner_menu a
+{
+   display:flex;  
+   list-style:none;
+
+   /*display: block;
+   float: left; */
+   color: #FFFFFF;
+   border: 0px #C0C0C0 solid;
+   background-color: #4E00C0;
+   background-image: none;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 15px;
+   font-style: normal;
+   text-decoration: none;
+   width: 99px;
+   height: 32px;
+   padding: 0px 5px 0px 5px;
+   vertical-align: middle;
+   line-height: 32px;
+   text-align: center;
+}
+#wb_banner_menu li:hover a, #wb_banner_menu a:hover, #wb_banner_menu .active
+{
+   color: #FFFFFF;
+   background-color: #999CC3;
+   background-image: none;
+   border: 0px #C0C0C0 solid;
+}
+#wb_banner_menu li.firstmain
+{
+   padding-left: 0px;
+}
+#wb_banner_menu li.lastmain
+{
+   padding-right: 0px;
+}
+#wb_banner_menu br
+{
+   clear: both;
+   font-size: 1px;
+   height: 0;
+   line-height: 0;
+}
+
+
+#status {
+      background-image:url(../images/off.png); 
+  background-size:100%;
+  float:left;
+}
+
+#status.fail {
+  background-image:url(../images/off.png); 
+  background-size:100%;
+}
+
+#status.success {
+  background-image:url(../images/on.png); 
+  background-size:100%;
+}
+
+#status.offline {
+  background-image:url(../images/off.png); 
+  background-size:100%;
+}
+
+#status.online {
+  background-image:url(../images/on.png); 
+  background-size:100%;
+}
+
+
+
+
+
+#control{
+
+  width: 45px;
+  height: 45px;
+  max-width: 45px;
+  max-height: 45px;
+  /*margin-top:2.5%; */
+  z-index:5; 
+  float:left;
+  margin-right:6%;
+}
+
+
+
+.has-control .hi-icon {
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  //margin: 15px 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #41ab6b;
+}
+
+.has-no-control .hi-icon {
+  display: inline-block;
+  font-size: 0px;
+  cursor: pointer;
+  //margin: 15px 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #000;
+}
+
+.hi-icon:before {
+  font-family: 'ecoicon';
+  speak: none;
+  font-size: 30px;
+  line-height: 45px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hi-icon-locked:before {
+  content: "\e001";
+}
+
+
+.hi-icon:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  -webkit-box-sizing: content-box; 
+  -moz-box-sizing: content-box; 
+  box-sizing: content-box;
+}
+
+.hi-icon-effect-1 .hi-icon {
+  background: rgba(255,255,255,0.1);
+  -webkit-transition: background 0.2s, color 0.2s;
+  -moz-transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hi-icon-effect-1 .hi-icon:after {
+  top: -7px;
+  left: -7px;
+  padding: 7px;
+  box-shadow: 0 0 0 4px rgb(65, 171, 107);
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -webkit-transform: scale(.8);
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  -moz-transform: scale(.8);
+  -ms-transform: scale(.8);
+  transition: transform 0.2s, opacity 0.2s;
+  transform: scale(.8);
+  opacity: 0;
+}
+
+.has-no-control.hi-icon-effect-1a .hi-icon:hover {
+  background: rgba(65,171,107,1);
+  color: #000;
+}
+
+.hi-icon-effect-1a .hi-icon:hover {
+  background: rgba(65,171,107,1);
+  color: #fff;
+}
+
+.hi-icon-effect-1a .hi-icon:hover:after {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+
+@media screen and (max-width: 810px) {
+
+#wb_banner_title{
+  visibility: hidden;
+  width:0.01%;
+}
+
+
+}

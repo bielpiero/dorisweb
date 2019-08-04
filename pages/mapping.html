@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+    <!--   <div id='cssmenu'>
+           <ul id='mapping_list'></ul>
+       </div>  -->
+
+    <div style="position:absolute;left:220px;top:1px;">
+        <svg id="mySVG" width="961" height="514"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <rect id="containerShape" width="961" height="514" style="fill:none;stroke-width:1;stroke:rgb(0,0,0)"/>
+        <g transform="translate(0,514) scale(1,-1)" id="g_container_features" style="visibility:visible"></g>
+        <g transform="translate(0,514) scale(1,-1)" id="g_container_landmarks" style="visibility:hidden"></g>
+        <g transform="translate(0,514) scale(1,-1)" id="g_container_sites" style="visibility:visible"></g>
+        <g transform="translate(0,514) scale(1,-1)" id="g_container_doris_position" style="visibility:visible"></g>   
+           
+
+        </svg>
+
+        <div id="programs_list" class="list-group">
+
+        </div>
+
+        <div style="position:relative;" id="mapping_div_control_container">
+
+          <div id="position-velocity-section" class="control-row" style="position:absolute;left:-5px;top:24px;">
+            <div id="sector-info-section" class="control-col">
+                    <label for="sector-info">Sector<br>Information</label><br>
+                    <label for="robot-map-id">Map Id: </label>
+                    <label id="robot-map-id-value"></label><br>
+                    <label for="robot-sector-id">Sector Id: </label>
+                    <label id="robot-sector-id-value"></label><br>
+                    <label for="robot-r-landmarks-th">R-Landmarks: </label>
+                    <label id="robot-r-landmarks-value"></label><br>
+                    <label for="robot-v-landmarks">V-Landmarks: </label>
+                    <label id="robot-v-landmarks-value"></label><br>
+                </div>
+                <div id="position-section" class="control-col" style="margin-left: 30px">
+                    <label for="robot-position">Robot <br>Position</label><br>
+                    <label for="robot-position-x">X: </label>
+                    <label id="robot-position-x-value"></label><br>
+                    <label for="robot-position-y">Y: </label>
+                    <label id="robot-position-y-value"></label><br>
+                    <label for="robot-position-th">&theta;: </label>
+                    <label id="robot-position-th-value"></label><br>
+                </div>
+
+                <div id="velocity-section" class="control-col" style="margin-left: 30px">
+                    <label for="robot-speed" style="margin-bottom: 0px;">Robot</label><br>
+                    <label for="robot-speed" >Speed</label><br>
+                    <label for="robot-speed-v">v: </label>
+                    <label id="robot-speed-v-value"></label><br>
+                    <label for="robot-speed-angular">&omega;: </label>
+                    <label id="robot-speed-w-value"></label><br>
+                </div>
+          </div>
+
+
+
+          <div id="control-section" class="control-row" style="position:absolute; top:26px; left:460px">
+                 <div id="control-section-left" class="control-col">
+                    <button class="spacing" onclick="addMessage(16, mapping_velocity.angular_positive); return false;"><img src="style/images/arrow_left.png"></button>
+                </div>
+                 <div id="control-section-center" class="control-col">
+                    <button class="spacing" onclick="addMessage(16, mapping_velocity.linear_positive); return false;"><img src="style/images/arrow_up.png"></button>
+                     <button class="spacing" onclick="addMessage(16,'0,0'); return false;"><img src="style/images/plat_stop.png"></button>
+                    <button class="spacing" onclick="addMessage(16, mapping_velocity.linear_negative); return false;"><img src="style/images/arrow_down.png"></button>
+                </div>
+                <div id="control-section-right" class="control-col">
+                    <button class="spacing" onclick="addMessage(16, mapping_velocity.angular_negative); return false;"><img src="style/images/arrow_right.png"></button>
+                </div>
+          </div>
+
+          <div id="setting-robot" style="position:absolute;left:310px" class="btn-group-vertical">
+            <button data-toggle="modal" class="btn btn-primary" type="button" id="set_doris_map" onclick="addMessage(22,selected_map.map_sector_string());">
+                Set Map
+            </button>
+            <button data-target="#set-robot-position" data-toggle="modal" class="btn btn-primary" type="button" id="set-position-button">
+                Set Position
+            </button>
+            <button data-toggle="modal" class="btn btn-primary" type="button" id="start_doris_tour" onclick="addMessage(17,'');">
+                Start Tour
+            </button>
+            
+            <button data-target="#goto-robot-position" data-toggle="modal" class="btn btn-primary" type="button" id="set-position-button">
+                Go to Position
+            </button>
+            <button data-target="#set-robot-max-speed" data-toggle="modal" class="btn btn-primary" type="button" id="set-max-speed-button">
+                Set Max Speed
+            </button>
+            <button data-toggle="modal" class="btn btn-primary" type="button" id="reset_doris_odometry" onclick="addMessage(48,'');">
+                Reset Odometry
+            </button>
+          </div>
+          <div id="check_drawing_options" style="position:absolute;left:5px;top:200px;text-align:left;display:inline;white-space: nowrap;">
+           <input type="checkbox" name="vehicle"  id="landmarks_check" > <span style="text-align:left;color:#ff5050;font-weight:bolder; "> Landmarks </span><br>
+           <input type="checkbox" name="vehicle"  checked id="features_check"> <span style="text-align:left;color:grey;font-weight:bolder"> Features </span><br>
+           <input type="checkbox" name="vehicle"  checked id="sites_check"><span style="text-align:left;color:#0066ff;font-weight:bolder"> Sites </span> 
+          </div>
+
+          <div id="name-sector-mapping-page" style="text-align:left;font-style: oblique;">
+
+
+          </div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!--Menu Mapping-->
+    <div class="u-vmenu">
+        <ul id="mapping_list">
+        </ul>
+    </div>
+
+
+            
+      
+            <!--Popup for setting position-->
+            <div id="set-robot-position" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div id="position-alert-success" class="alert alert-success collapse fade" role="alert">
+                                <strong>Success!</strong>
+                            </div>
+                            <div id="position-alert-failed" class="alert alert-danger collapse fade" role="alert">
+                                <strong>Error!</strong> Permission denied.
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <label for="set-robot-position" class="modal-title">Set Robot Position</label>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="set-robot-position-x" class="control-label">X:</label>
+                                    <input type="text" class="form-control" id="set-robot-position-x-value" placeholder="X position (meters)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="set-robot-position-y" class="control-label">Y:</label>
+                                    <input type="text" class="form-control" id="set-robot-position-y-value" placeholder="Y position (meters)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="set-robot-position-th" class="control-label">&theta;:</label>
+                                    <input type="text" class="form-control" id="set-robot-position-th-value" placeholder="&theta; angle (rad)">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" onclick="setPosition(); return false;">Set</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End-->
+            <!--Popup for going to position-->
+            <div id="goto-robot-position" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div id="goto-position-alert-success" class="alert alert-success collapse fade" role="alert">
+                                <strong>Success!</strong>
+                            </div>
+                            <div id="goto-position-alert-failed" class="alert alert-danger collapse fade" role="alert">
+                                <strong>Error!</strong> Permission denied.
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <label for="goto-robot-position" class="modal-title">Go to Position</label>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="goto-robot-position-x" class="control-label">X:</label>
+                                    <input type="text" class="form-control" id="goto-robot-position-x-value" placeholder="X position (meters)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="goto-robot-position-y" class="control-label">Y:</label>
+                                    <input type="text" class="form-control" id="goto-robot-position-y-value" placeholder="Y position (meters)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="goto-robot-position-th" class="control-label">&theta;:</label>
+                                    <input type="text" class="form-control" id="goto-robot-position-th-value" placeholder="&theta; angle (rad)">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" onclick="gotoPosition(); return false;">Set</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End-->
+            <!--Popup for changing angular and linear velocity-->
+            <div id="set-robot-max-speed" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <label for="set-robot-max-speed" class="modal-title">Robot Position</label>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="set-robot-max-speed-v" class="control-label">v:</label>
+                                    <input type="text" class="form-control" id="set-robot-speed-v-value">
+                                </div>
+                                <div class="form-group">
+                                    <label for="set-robot-max-speed-w" class="control-label">&omega;:</label>
+                                    <input type="text" class="form-control" id="set-robot-speed-w-value">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            <button class="btn btn-primary" data-dismiss="modal" onclick="mapping_changeVelocity();">Set</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End-->
+
+</body>
+</html>

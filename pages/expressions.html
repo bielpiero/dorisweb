@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body >
+   
+    	<div id="menu12" style="float:left">
+        	<ul id="expressions_list"></ul>
+    	</div>
+    	<div  style="float:right">
+    		<!--<img src="style/images/caraDoris.jpg" style="width:922px;height: :922px">-->
+            <div id="result-speech-recognition"></div>
+    		<button data-target="#send-voice-message" data-toggle="modal" class="btn btn-info" type="button" id="set-voic-message">
+            Send Voice Message
+        	</button>
+            <button onclick="startConverting(); return false;"><i class="fa fa-microphone"></i></button>
+    		
+    	</div>
+
+        
+
+    	<div id="send-voice-message" class="modal fade" role="dialog">
+    		<div class="modal-dialog modal-sm">
+    			<div class="modal-content">
+    				<div class="modal-header">
+    					<div id="send-voice-message-alert-success" class="alert alert-success collapse fade" role="alert">
+    						<strong>Success!</strong>
+    					</div>
+    					<div id="send-voice-message-alert-failed" class="alert alert-danger collapse fade" role="alert">
+    						<strong>Error!</strong> Permission denied.
+    					</div>
+    					<button type="button" class="close" data-dismiss="modal">&times;</button>
+    					<label for="send-voice-message" class="modal-title">Send Voice Message</label>
+    				</div>
+    				<div class="modal-body">
+	    				<form>
+	    					<div class="form-group">
+	    						<label for="send-voice-message-text-label" class="control-label">Message:</label>
+	    						<input type="text" class="form-control" id="send-voice-message-value" placeholder="Message">
+	    					</div>
+	    				</form>
+    				</div>
+    				<div class="modal-footer">
+	    				<button class="btn btn-default" data-dismiss="modal">Cancel</button>
+	    				<button class="btn btn-primary" onclick="sendVoiceMessage(); return false;">Set</button>
+    				</div>
+    			</div>			    		
+    		</div>
+    	</div>
+</body>
+</html>
